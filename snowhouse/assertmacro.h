@@ -12,4 +12,7 @@
 #define AssertThat(p1,p2)\
   Assert::That((p1), (p2), __FILE__, __LINE__);\
 
+#define AssertFailure(m)\
+  Assert::Failure(m, __FILE__, __LINE__);\
+
 #endif	// IGLOO_ASSERTMACRO_H

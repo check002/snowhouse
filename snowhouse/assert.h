@@ -99,6 +99,11 @@ namespace snowhouse {
          throw AssertionException(message);
       }
 
+      static void Failure(const std::string& message, const char* file_name, int line_number)
+      {
+         throw AssertionException(message, file_name, line_number);
+      }
+
    private:
       template <class ExpectedType, class ActualType>
       static std::string CreateErrorText(const ExpectedType& expected, const ActualType& actual)
